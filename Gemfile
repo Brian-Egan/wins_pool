@@ -36,3 +36,5 @@ end
 gem "nokogiri"
 
 gem "awesome_print"
+
+ruby "2.2.0"
