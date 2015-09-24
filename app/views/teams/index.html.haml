@@ -1,0 +1,29 @@
+%h1 NFL Standings
+
+%table.table-striped.col-md-12
+  %thead
+    %tr.text-center
+      %th.text-center Name
+      %th.text-center Wins
+      %th.text-center Losses
+      %th.text-center Ties
+      %th.text-center User
+      -# %th
+      -# %th
+      -# %th
+
+  %tbody
+    - @teams.each do |team|
+      %tr.text-center
+        %td= team.name
+        %td= team.wins
+        %td= team.losses
+        %td= team.ties
+        %td= team.user_id
+        -# %td= link_to 'Show', team
+        -# %td= link_to 'Edit', edit_team_path(team)
+        -# %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Team', new_team_path

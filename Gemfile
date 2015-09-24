@@ -28,3 +28,11 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+
+
+# gem 'espn_scraper', git: 'git://github.com/aj0strow/espn-scraper.git'
+
+gem "nokogiri"
+
+gem "awesome_print"
