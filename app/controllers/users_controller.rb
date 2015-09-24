@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    Team.update
     @users = User.includes(:teams)
   end
 
