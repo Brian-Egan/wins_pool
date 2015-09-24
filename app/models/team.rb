@@ -4,7 +4,7 @@ class Team < ActiveRecord::Base
   default_scope {order("wins DESC")}
 
   # require "Nokogiri"
-  # require 'open-uri'
+  require 'open-uri'
 
 
   def self.update
