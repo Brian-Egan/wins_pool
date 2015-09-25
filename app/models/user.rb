@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
             {name: "Matt Blaszko", teams: ["Cowboys", "Bengals", "Jets"] },
             {name: "Sean", teams: ["Cardinals", "Bucs", "Steelers"] },
         ].each do |user|
-            new_user = User.create(name: user[:name])
+            new_user = User.find_or_create_by(name: user[:name])
             user[:teams].each do |nickname|
                 team = Team.where("name LIKE ?","%#{nickname}%").first
                 team.update_attributes(user_id: new_user.id) if team

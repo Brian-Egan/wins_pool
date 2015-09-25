@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+# ruby '2.1.2'
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -27,6 +27,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+
 end
 
 
@@ -36,5 +37,6 @@ end
 gem "nokogiri"
 
 gem "awesome_print"
+
 
 ruby "2.2.0"
