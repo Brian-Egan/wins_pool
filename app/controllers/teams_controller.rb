@@ -4,7 +4,7 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    Team.update
+    # Team.update
     @teams = Team.all
   end
 

@@ -14,16 +14,17 @@
 
   %tbody
     - @teams.each do |team|
-      %tr.text-center
-        %td= team.name
-        %td= team.wins
-        %td= team.losses
-        %td= team.ties
-        %td= team.user.name
-        -# %td= link_to 'Show', team
-        -# %td= link_to 'Edit', edit_team_path(team)
-        -# %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - unless team.user.nil?
+        %tr.text-center
+          %td= team.name
+          %td= team.wins
+          %td= team.losses
+          %td= team.ties
+          %td= team.user.name
+          -# %td= link_to 'Show', team
+          -# %td= link_to 'Edit', edit_team_path(team)
+          -# %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Team', new_team_path
+-# = link_to 'New Team', new_team_path
