@@ -2,25 +2,26 @@
 
 .clearfix
   %br
-  
-.panel.panel-warning.center-block.col-md-5
-  .panel-heading
-    %h3.panel-title= "#{@user.name} (#{@user.wins}-#{@user.losses}-#{@user.ties})"
-  .panel-body
-    %table.table-striped.col-md-5.col-sm-8.col-xs-12.col-md-offset-1.table-bordered
-      %thead
-        %tr.text-center 
-          %th.text-center Team
-          %th.text-center W
-          %th.text-center L
-          %th.text-center T
-      %tbody
-        - @user.teams.each do |team|
-          %tr.text-center
-            %td= team.name
-            %td= team.wins
-            %td= team.losses
-            %td= team.ties
+
+.center-block.col-md-5
+  .panel.panel-warning
+    .panel-heading
+      %h3.panel-title= "#{@user.name} (#{@user.wins}-#{@user.losses}-#{@user.ties})"
+    .panel-body
+      %table.table-striped.col-md-11.col-sm-12.col-xs-12.col-md-offset-1.table-bordered
+        %thead
+          %tr.text-center 
+            %th.text-center Team
+            %th.text-center W
+            %th.text-center L
+            %th.text-center T
+        %tbody
+          - @user.teams.each do |team|
+            %tr.text-center
+              %td= team.name
+              %td= team.wins
+              %td= team.losses
+              %td= team.ties
 
 %p
   = link_to 'Back', users_path
