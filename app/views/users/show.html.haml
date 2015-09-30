@@ -1,8 +1,8 @@
 %p#notice= notice
 
-.panel.panel-default
+.panel.panel-warning
   .panel-heading
-    %h3.panel-title= "#{@user.name} (#{@user.wins-#{@user.losses}-#[@user.ties})"
+    %h3.panel-title= "#{@user.name} (#{@user.wins}-#{@user.losses}-#{@user.ties})"
   .panel-body
     %table.table-striped.col-md-5.col-sm-8.col-xs-12.col-md-offset-1.table-bordered
       %thead
