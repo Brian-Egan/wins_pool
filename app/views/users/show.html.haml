@@ -3,7 +3,25 @@
 %p
   %b Name:
   = @user.name
+%p 
+  %b Teams:
 
-= link_to 'Edit', edit_user_path(@user)
+%table.table-striped.col-md-6.col-sm-12.col-xs-12.col-md-offset-1
+  %thead
+    %tr.text-center 
+      %th.text-center Name
+      %th.text-center W
+      %th.text-center L
+      %th.text-center T
+      
+  %tbody
+    - @user.teams.each do |team|
+       %tr.text-center
+        %td= team.name
+        %td= team.wins
+        %td= team.losses
+        %td= team.ties
+
+-# // = link_to 'Edit', edit_user_path(@user)
 \|
 = link_to 'Back', users_path
