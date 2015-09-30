@@ -1,29 +1,35 @@
-%h1 NFL Standings
-
-%table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
-  %thead
-    %tr.text-center
-      %th.text-center Name
-      %th.text-center W
-      %th.text-center L
-      %th.text-center T
-      %th.text-center Owner
-      -# %th
-      -# %th
-      -# %th
-
-  %tbody
-    - @teams.each do |team|
-      - unless team.user.nil?
-        %tr.text-center
-          %td= team.name
-          %td= team.wins
-          %td= team.losses
-          %td= team.ties
-          %td= link_to team.user.name, team.user
-          -# %td= link_to 'Show', team
-          -# %td= link_to 'Edit', edit_team_path(team)
-          -# %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
+.clearfix
+  %br
+  %p 
+.center-block.col-md-11.col-md-offset-1.col-sm-10.col-xs-11  
+  .panel.panel-warning
+    .panel-heading
+      %h2.panel-title= "NFL Standings"
+    .panel-body
+      %table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
+        %thead
+          %tr.text-center
+            %th.text-center Name
+            %th.text-center W
+            %th.text-center L
+            %th.text-center T
+            %th.text-center Owner
+            -# %th
+            -# %th
+            -# %th
+      
+        %tbody
+          - @teams.each do |team|
+            - unless team.user.nil?
+              %tr.text-center
+                %td= team.name
+                %td= team.wins
+                %td= team.losses
+                %td= team.ties
+                %td= link_to team.user.name, team.user
+                -# %td= link_to 'Show', team
+                -# %td= link_to 'Edit', edit_team_path(team)
+                -# %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
