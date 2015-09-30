@@ -1,6 +1,9 @@
 %p#notice= notice
 
-.panel.panel-warning
+.clearfix
+  %br
+  
+.panel.panel-warning.center-block.col-md-5
   .panel-heading
     %h3.panel-title= "#{@user.name} (#{@user.wins}-#{@user.losses}-#{@user.ties})"
   .panel-body
