@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    User.load_users
   end
 
   # GET /users/new
