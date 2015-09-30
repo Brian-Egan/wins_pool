@@ -7,26 +7,17 @@
     %table.table-striped.col-md-6.col-sm-12.col-xs-12.col-md-offset-1.table-bordered
       %thead
         %tr.text-center 
-          %th.text-center Name
+          %th.text-center Team
           %th.text-center W
           %th.text-center L
           %th.text-center T
-
-%table.table-striped.col-md-6.col-sm-12.col-xs-12.col-md-offset-1.table-bordered
-  %thead
-    %tr.text-center 
-      %th.text-center Name
-      %th.text-center W
-      %th.text-center L
-      %th.text-center T
-      
-  %tbody
-    - @user.teams.each do |team|
-      %tr.text-center
-        %td= team.name
-        %td= team.wins
-        %td= team.losses
-        %td= team.ties
+      %tbody
+        - @user.teams.each do |team|
+          %tr.text-center
+            %td= team.name
+            %td= team.wins
+            %td= team.losses
+            %td= team.ties
 
 %p
   = link_to 'Back', users_path
