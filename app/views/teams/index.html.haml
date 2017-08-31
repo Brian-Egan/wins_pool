@@ -2,31 +2,17 @@
   %br
   %p 
 .center-block.col-md-11.col-md-offset-1.col-sm-10.col-xs-11  
-  .panel.panel-warning
+  .panel.panel-info
     .panel-heading
-      %h2.panel-title= "NFL Standings"
-    .panel-body
-      %table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
-        %thead
-          %tr.text-center
-            %th.text-center Name
-            %th.text-center W
-            %th.text-center L
-            %th.text-center T
-            %th.text-center Points For
-            %th.text-center Points Against
-            %th.text-center Point Differential
-            %th.text-center Owner
-        %tbody
-          - @teams.each do |team|
-            - unless team.user.nil?
-              %tr.text-center
-                %td= team.name
-                %td= team.wins
-                %td= team.losses
-                %td= team.ties
-                %td= team.points_for
-                %td= team.points_against
-                %td= team.point_differential
-                %td= link_to team.user.name, team.user
+      %h2#standingsPanelTitle.panel-title{class: "col-md-12"}= "NFL Standings"
+      .clearfix.col-md-12
+        / %br
+        %p
+      .row
+        = link_to "Update Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-1 col-md-offset-1 btn btn-primary btn-sm standingsBtn"
+        = link_to "Randomize", update_standings_teams_path(order: :randomize), remote: true, class: "col-md-1 btn btn-warning btn-sm col-md-offset-1 standingsBtn"
+        = link_to "Shuffle", update_standings_teams_path(order: :shuffle), remote: true, class: "col-md-1 btn btn-default btn-sm col-md-offset-1 standingsBtn"
+        = link_to "Reset", update_standings_teams_path(order: :default), remote: true, class: "col-md-1 btn btn-danger btn-sm col-md-offset-1 standingsBtn"
+    #teamStandings.panel-body
+      = render 'standings', locals: {teams: @teams}
 %br

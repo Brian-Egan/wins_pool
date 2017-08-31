@@ -39,6 +39,7 @@ group :development do
   gem 'rails_layout'
   gem "annotate"
   gem "haml-rails", "~> 1.0"
+  gem "pry-rails"
 end
 group :development, :test do
   # gem 'sqlite3'

@@ -1,18 +1,47 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  # respond_to :html, :js
 
   # GET /teams
   # GET /teams.json
   def index
     # Team.update
-    # @teams = Team.all
-    @teams = Team.all.sort_by{|x| [x.wins, x.point_differential]}.reverse
+    @teams = Team.all
   end
 
   # GET /teams/1
   # GET /teams/1.json
   def show
   end
+
+  def update_standings
+    # @teams = Team.all.shuffle
+    # @teams = Team.update
+    case params[:order].to_sym
+    when :update_nfl
+      @s = Time.now 
+      Team.update 
+      puts "Elapsed: #{Time.now - @s}"
+      @teams = Team.all
+    when :randomize
+      Team.randomize
+      @teams = Team.all
+    when :shuffle 
+      @teams = Team.all.shuffle
+    when :default
+      @teams = Team.all
+    else
+      @teams = Team.all 
+    end
+    # 
+    # render "index" 
+
+    respond_to do |format|
+    #   format.html
+      format.js
+    end
+  end
+
 
   def update
     # Team.update

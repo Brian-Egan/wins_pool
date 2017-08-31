@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :teams
+  resources :teams do 
+    get "update_standings", on: :collection
+  end
 
   resources :users
 

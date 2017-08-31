@@ -1,0 +1,23 @@
+%table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
+  %thead
+    %tr.text-center
+      %th.text-center Name
+      %th.text-center W
+      %th.text-center L
+      %th.text-center T
+      %th.text-center Points For
+      %th.text-center Points Against
+      %th.text-center Point Differential
+      %th.text-center Owner
+  %tbody
+    - @teams.each do |team|
+      - unless team.user.nil?
+        %tr.text-center
+          %td= team.name
+          %td= team.wins
+          %td= team.losses
+          %td= team.ties
+          %td= team.points_for
+          %td= team.points_against
+          %td= team.point_differential
+          %td= link_to team.user.name, team.user
