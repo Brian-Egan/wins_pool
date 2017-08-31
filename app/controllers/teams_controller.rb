@@ -5,7 +5,8 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     # Team.update
-    @teams = Team.all
+    # @teams = Team.all
+    @teams = Team.all.sort_by{|x| [x.wins, x.point_differential]}.reverse
   end
 
   # GET /teams/1

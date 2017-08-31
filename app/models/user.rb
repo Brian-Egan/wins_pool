@@ -1,4 +1,14 @@
-class User < ActiveRecord::Base
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+class User < ApplicationRecord
     has_many :teams
 
     def self.load_users
@@ -26,21 +36,28 @@ class User < ActiveRecord::Base
 
 
     def wins
-        if self.teams
-            teams.map{|x| x.wins}.sum
-        end
+      if self.teams
+        teams.map{|x| x.wins}.sum
+      end
     end
 
     def losses
-        if self.teams
-            teams.map{|x| x.losses}.sum
-        end
+      if self.teams
+        teams.map{|x| x.losses}.sum
+      end
     end
 
     def ties
-        if self.teams
-            teams.map{|x| x.ties}.sum
-        end
+      if self.teams
+        teams.map{|x| x.ties}.sum
+      end
     end
+
+    def point_differential
+      if self.teams
+        teams.map{|x| x.point_differential}.sum
+      end
+    end
+
 
 end

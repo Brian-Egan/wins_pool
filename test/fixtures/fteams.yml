@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  wins: 1
+  losses: 1
+  ties: 1
+  long_record: MyText
+  user: one
+
+two:
+  name: MyString
+  wins: 1
+  losses: 1
+  ties: 1
+  long_record: MyText
+  user: two

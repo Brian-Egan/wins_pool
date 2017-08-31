@@ -14,17 +14,19 @@
             %th.text-center W
             %th.text-center L
             %th.text-center T
+            %th.text-center Point Differential
             %th.text-center Teams
       
       
         %tbody
-          - @users.sort_by{|x| x.wins}.reverse.each_with_index do |user, index|
+          - @users.sort_by{|x| [x.wins, x.point_differential]}.reverse.each_with_index do |user, index|
             %tr
               %td.text-center= index + 1
               %td.text-center= link_to user.name, user
               %td.text-center= user.wins
               %td.text-center= user.losses
               %td.text-center= user.ties
+              %td.text-center= user.point_differential
               %td.text-center= user.teams.map{|x| "#{x.name.split(" ").last} (#{x.wins})"}.join(", ")
               -# %td= link_to 'Show', user
               -# %td= link_to 'Edit', edit_user_path(user)

@@ -1,5 +1,22 @@
-class Team < ActiveRecord::Base
+# == Schema Information
+#
+# Table name: teams
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  wins        :integer
+#  losses      :integer
+#  ties        :integer
+#  long_record :text
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+class Team < ApplicationRecord
   belongs_to :user
+
+  serialize :long_record, Hash
 
   default_scope {order("wins DESC")}
 
@@ -23,18 +40,12 @@ class Team < ActiveRecord::Base
         headers.each_with_index{|h, i| team[h] = row[i]}
         team = self.find_or_create_by(name: team_hsh["Team"])
         team.update_attributes(wins: team_hsh["W"].to_i, losses: team_hsh["L"].to_i, ties: team_hsh["T"].to_i)
-        team.save
-
-        ## Below is old way from 2015
-        # unless (row.text.include?("AFC") or row.text.include?("NFC") or row.text.include?("Conference") or row.text.empty?)
-        # record = row.css("td").map{|x| x.text.strip}[0..3]
-        # team = self.find_or_create_by(name: record[0])
-        # team.update_attributes(wins: record[1], losses: record[2], ties: record[3])
-        # # team.save if team.changed?
-        # team.save
-        # end
+        team.save if team.changed?
     end
+  end
 
+  def point_differential
+    (self.points_for - self.points_against)
   end
 
 
