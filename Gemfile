@@ -29,7 +29,7 @@ gem 'haml'
 gem 'high_voltage'
 gem 'puma'
 
-  gem 'sqlite3'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -40,6 +40,7 @@ group :development do
   gem "annotate"
   gem "haml-rails", "~> 1.0"
   gem "pry-rails"
+    gem 'sqlite3'
 end
 group :development, :test do
   # gem 'sqlite3'
