@@ -34,29 +34,50 @@ class User < ApplicationRecord
 
     end
 
-    def self.create_users
-        self.destroy_all
-        users = [
-            {
-                name: "Brian"
-            },
-            {
-                name: "Rob"
-            },
-            {
-                name: "Brad"
-            },
-            {
-                name: "Charlie"
-            },
-            {
-                name: "Saugat"
-            },
-            {
-                name: "Laura"
-            }
-        ]
-        users.each {|x| User.create(x)}
+    def self.create_users_and_associate_teams
+      Team.all.each{|t| t.update_attributes(user_id: nil)}
+      self.destroy_all
+      users = [
+          {
+              name: "Brian",
+              teams: ["Seahawks", "Panthers", "Vikings", "Broncos"]
+          },
+          {
+              name: "Rob",
+              teams: ["Steelers", "Chiefs", "Ravens", "Chargers"]
+          },
+          {
+              name: "Brad",
+              teams: ["Packers", "Giants", "Cardinals", "Dolphins"]
+          },
+          {
+              name: "Charlie",
+              teams: ["Falcons", "Titans", "Eagles", "Texans"]
+          },
+          {
+              name: "Saugat",
+              teams: ["Patriots", "Buccaneers", "Bengals"]
+          },
+          {
+              name: "Laura",
+              teams: ["Cowboys", "Raiders", "Lions", "Saints"]
+          }
+      ]
+      users.each {|x| 
+        # puts "Creating #{x} - who has teams #{x[:teams]}"
+        u = User.create(name: x[:name])
+        # puts "Created #{x}"
+        x[:teams].each do |t|
+          puts "Assigning #{t} to #{u.name}"
+          team = Team.where("name like ?","%#{t}").first
+          print "  - Team ID: #{team.id}"
+          if team.nil?
+            puts "No team found with name #{t}"
+          else 
+            team.update_attributes(user_id: u.id)
+          end
+        end
+      }
     end
 
     def wins
