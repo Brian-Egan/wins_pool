@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   # GET /teams.json
   def index
     # Team.update
+    Team.should_auto_update?
     @teams = Team.all
   end
 

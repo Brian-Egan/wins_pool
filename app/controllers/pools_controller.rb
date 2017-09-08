@@ -10,6 +10,7 @@ class PoolsController < ApplicationController
   # GET /pools/1
   # GET /pools/1.json
   def show
+    Team.should_auto_update?
     @users = @pool.users.includes(:teams).sort_by{|x| [x.sort_stat, x.point_differential, x.name]}.reverse
     # @teams = @pool.standings
   end

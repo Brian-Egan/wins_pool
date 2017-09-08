@@ -29,6 +29,17 @@ class Team < ApplicationRecord
   # require "Nokogiri"
   require 'open-uri'
 
+  def self.update_interval
+    min = 20
+    return (min * 60)
+  end
+
+  def self.should_auto_update?
+    if ((Time.now - self.order(updated_at: :desc).first.updated_at) >= update_interval)
+      self.update 
+    end
+  end
+
 
   def self.update
     doc = Nokogiri::HTML(open("http://www.nfl.com/standings"))
