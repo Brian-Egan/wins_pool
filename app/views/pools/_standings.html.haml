@@ -1,0 +1,19 @@
+%table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
+  %thead
+    %tr.text-center
+      %th.text-center.col-md-1.col-lg-1.col-sm-1.col-cs-1 #
+      %th.text-center.col-md-4.col-lg-4.col-xs-4.col-sm-4 Name
+      %th.text-center= @pool.sort_stat.capitalize
+      %th.text-center Point Differential
+      %th.text-left Teams
+  %tbody
+    - @users.each_with_index do |user, indx|
+      %tr.text-center
+        %td= indx + 1
+        %td= user.name
+        %td= user.sort_stat
+        %td= user.point_differential
+        %td.text-left
+          %ul
+            - user.teams.each do |t|
+              %li.small= "#{t.name} (#{t.send(@pool.sort_stat)})"

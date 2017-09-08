@@ -10,8 +10,19 @@ class PoolsController < ApplicationController
   # GET /pools/1
   # GET /pools/1.json
   def show
-    @users = @pool.users.sort_by{|x| [x.sort_stat, x.point_differential, x.name]}.reverse
+    @users = @pool.users.includes(:teams).sort_by{|x| [x.sort_stat, x.point_differential, x.name]}.reverse
     # @teams = @pool.standings
+  end
+
+  # GET /pools/1/update_standings.json
+  def update_standings
+    Team.update
+    @pool = Pool.find(params[:id])
+    @users = @pool.users.includes(:teams).sort_by{|x| [x.sort_stat, x.point_differential, x.name]}.reverse
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   # GET /pools/new

@@ -7,28 +7,12 @@
   .panel.panel-info
     .panel-heading.col-md-12
       %h2#standingsPanelTitle.panel-title{class: "col-md-4"}= "#{@pool.name} Standings"
-      = link_to "Update NFL Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col-xs-2 col-xs-offset-6 col-lg-2 col-lg-offset-6 btn btn-primary btn-sm standingsBtn"
-    #teamStandings.panel-body
+      / #= link_to "Update NFL Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col-xs-2 col-xs-offset-6 col-lg-2 col-lg-offset-6 btn btn-primary btn-sm standingsBtn"
+      = link_to "Update Standings", update_standings_pool_path(order: :update_nfl), remote: true, class: "col-md-1 col-md-offset-1 btn btn-primary btn-sm standingsBtn"
+    #poolStandings.panel-body
+      = render 'standings', locals: {pool: @pool, users: @users}
       / #= render 'teams/standings', locals: {teams: @teams}
-      %table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
-        %thead
-          %tr.text-center
-            %th.text-center.col-md-1.col-lg-1.col-sm-1.col-cs-1 #
-            %th.text-center.col-md-4.col-lg-4.col-xs-4.col-sm-4 Name
-            %th.text-center= @pool.sort_stat.capitalize
-            %th.text-center Point Differential
-            %th.text-left Teams
-        %tbody
-          - @users.each_with_index do |user, indx|
-            %tr.text-center
-              %td= indx + 1
-              %td= user.name
-              %td= user.sort_stat
-              %td= user.point_differential
-              %td.text-left
-                %ul
-                  - user.teams.each do |t|
-                    %li.small= "#{t.name} (#{t.send(@pool.sort_stat)})"
+      
 
 / #= link_to 'Edit', edit_pool_path(@pool)
 / \|
