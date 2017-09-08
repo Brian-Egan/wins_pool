@@ -2,23 +2,27 @@
 #
 # Table name: teams
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  wins        :integer
-#  losses      :integer
-#  ties        :integer
-#  long_record :text
-#  user_id     :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id                 :integer          not null, primary key
+#  name               :string
+#  wins               :integer
+#  losses             :integer
+#  ties               :integer
+#  points_for         :integer
+#  points_against     :integer
+#  long_record        :text
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  point_differential :integer
 #
 
 class Team < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
+
+  has_and_belongs_to_many :users
 
   serialize :long_record, Hash
 
-  default_scope -> { order(wins: :desc, point_differential: :desc)}
+  # default_scope -> { order(wins: :desc, point_differential: :desc)}
 
   after_update :calculate_point_differential
 
@@ -59,9 +63,8 @@ class Team < ApplicationRecord
 
   def self.assign
     self.all.each {|t| t.update_attributes(user_id: User.all.shuffle.first.id)}
-    
-
   end
+
 
   def calculate_point_differential
     self.update_attributes(point_differential: self.points_for - self.points_against) unless (self.point_differential == (self.points_for - self.points_against))

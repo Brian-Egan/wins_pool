@@ -2,15 +2,17 @@
 #
 # Table name: teams
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  wins        :integer
-#  losses      :integer
-#  ties        :integer
-#  long_record :text
-#  user_id     :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id                 :integer          not null, primary key
+#  name               :string
+#  wins               :integer
+#  losses             :integer
+#  ties               :integer
+#  points_for         :integer
+#  points_against     :integer
+#  long_record        :text
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  point_differential :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

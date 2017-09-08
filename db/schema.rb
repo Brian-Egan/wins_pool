@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831184136) do
+ActiveRecord::Schema.define(version: 20170908203755) do
+
+  create_table "pools", force: :cascade do |t|
+    t.text "name"
+    t.text "long_name"
+    t.boolean "active"
+    t.text "sort_order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "sort_stat"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
@@ -20,17 +30,23 @@ ActiveRecord::Schema.define(version: 20170831184136) do
     t.integer "points_for"
     t.integer "points_against"
     t.text "long_record"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "point_differential"
-    t.index ["user_id"], name: "index_teams_on_user_id"
+  end
+
+  create_table "teams_users", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "user_id"
+    t.index ["team_id"], name: "index_teams_users_on_team_id"
+    t.index ["user_id"], name: "index_teams_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "pool_id"
   end
 
 end

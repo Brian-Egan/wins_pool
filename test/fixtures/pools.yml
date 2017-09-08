@@ -1,18 +1,26 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: pools
 #
 #  id         :integer          not null, primary key
-#  name       :string
+#  name       :text
+#  long_name  :text
+#  active     :boolean
+#  sort_order :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  pool_id    :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: MyText
+  long_name: MyText
+  active: false
+  sort_order: MyText
 
 two:
-  name: MyString
+  name: MyText
+  long_name: MyText
+  active: false
+  sort_order: MyText

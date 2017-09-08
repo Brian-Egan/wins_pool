@@ -11,7 +11,7 @@
       %th.text-center Owner
   %tbody
     - @teams.each do |team|
-      - unless team.user.nil?
+      - unless team.users.nil?
         %tr.text-center
           %td= team.name
           %td= team.wins
@@ -20,4 +20,3 @@
           %td= team.points_for
           %td= team.points_against
           %td= team.point_differential
-          %td= link_to team.user.name, team.user

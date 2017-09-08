@@ -1,0 +1,16 @@
+.clearfix
+  %br
+  %p 
+.center-block.col-md-11.col-md-offset-1.col-sm-10.col-xs-11  
+  .panel.panel-info
+    .panel-heading.col-md-12
+      %h1.panel-title.col-md-4 Pools
+    .panel-body
+      - @pools.each do |pool|
+        .clearfix
+        %br
+        = link_to pool.name, pool_path(pool.id), class: "btn btn-large btn-primary col-md-4 col-sm-8 col-lg-4, col-xs-8 col-md-offset-1 col-lg-offset-1 col-sm-offset-2"
+
+
+%br
+

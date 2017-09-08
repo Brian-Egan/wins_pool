@@ -6,10 +6,13 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  pool_id    :integer
 #
 
 class User < ApplicationRecord
-    has_many :teams
+    # has_many :teams
+    has_and_belongs_to_many :teams
+    belongs_to :pool
 
     def self.load_users
         [
@@ -33,6 +36,42 @@ class User < ApplicationRecord
 
 
     end
+
+    def self.init_anew
+      Team.destroy_all
+      self.destroy_all
+      Team.update 
+      users = [
+          {
+              name: "Brian",
+              teams: ["Seahawks", "Panthers", "Vikings", "Broncos"]
+          },
+          {
+              name: "Rob",
+              teams: ["Steelers", "Chiefs", "Ravens", "Chargers"]
+          },
+          {
+              name: "Brad",
+              teams: ["Packers", "Giants", "Cardinals", "Dolphins"]
+          },
+          {
+              name: "Charlie",
+              teams: ["Falcons", "Titans", "Eagles", "Texans"]
+          },
+          {
+              name: "Saugat",
+              teams: ["Patriots", "Buccaneers", "Bengals"]
+          },
+          {
+              name: "Laura",
+              teams: ["Cowboys", "Raiders", "Lions", "Saints"]
+          }
+        ]
+      users.each {|x|
+        u = User.create(name: x[:name])
+
+      }
+  end
 
     def self.create_users_and_associate_teams
       Team.all.each{|t| t.update_attributes(user_id: nil)}
@@ -68,16 +107,28 @@ class User < ApplicationRecord
         u = User.create(name: x[:name])
         # puts "Created #{x}"
         x[:teams].each do |t|
-          puts "Assigning #{t} to #{u.name}"
-          team = Team.where("name like ?","%#{t}").first
-          print "  - Team ID: #{team.id}"
-          if team.nil?
-            puts "No team found with name #{t}"
-          else 
-            team.update_attributes(user_id: u.id)
-          end
+          # puts "Assigning #{t} to #{u.name}"
+          # team = Team.where("name like ?","%#{t}").first
+          # print "  - Team ID: #{team.id}"
+          # if team.nil?
+          #   puts "No team found with name #{t}"
+          # else 
+          #   team.update_attributes(user_id: u.id)
+          # end
+          u.add_team_by_name(t) if u
         end
       }
+    end
+
+    def add_team_by_name(team_name)
+      team = Team.where("name like ?","%#{team_name}").first
+      self.teams << team 
+      self.save
+      # team.update_attributes(user_id: u.id) unless team.nil?
+    end
+
+    def sort_stat
+      self.send(self.pool.sort_stat)
     end
 
     def wins

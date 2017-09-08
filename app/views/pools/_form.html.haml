@@ -1,0 +1,22 @@
+= form_for @pool do |f|
+  - if @pool.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pool.errors.count, "error")} prohibited this pool from being saved:"
+      %ul
+        - @pool.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_area :name
+  .field
+    = f.label :long_name
+    = f.text_area :long_name
+  .field
+    = f.label :active
+    = f.check_box :active
+  .field
+    = f.label :sort_order
+    = f.text_area :sort_order
+  .actions
+    = f.submit 'Save'
