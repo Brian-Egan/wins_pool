@@ -98,7 +98,7 @@ class Pool < ApplicationRecord
     Team.update 
     pools = initial_info 
     pools.each do |p|
-      pool = Pool.create(name: p[:name], long_name: p[:long_name], active: p[:active], sort_order: p[:sort_order])
+      pool = Pool.create(name: p[:name], long_name: p[:long_name], active: p[:active], sort_order: p[:sort_order], sort_stat: p[:sort_stat])
       p[:users].each do |u|
         user = User.create(name: u[:name], pool_id: pool.id)
         teams = u[:teams].map{|t| Team.where("name like ?", "%#{t}%").first}
