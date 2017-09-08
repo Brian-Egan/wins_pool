@@ -58,7 +58,8 @@ class Team < ApplicationRecord
   end
 
   def self.assign
-    self.all.each {|t| t.update_attributes(user_id: User.all.shuffle.first.id)}
+    # self.all.each {|t| t.update_attributes(user_id: User.all.shuffle.first.id)}
+    
   end
 
   def calculate_point_differential

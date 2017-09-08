@@ -34,6 +34,30 @@ class User < ApplicationRecord
 
     end
 
+    def self.create_users
+        self.destroy_all
+        users = [
+            {
+                name: "Brian"
+            },
+            {
+                name: "Rob"
+            },
+            {
+                name: "Brad"
+            },
+            {
+                name: "Charlie"
+            },
+            {
+                name: "Saugat"
+            },
+            {
+                name: "Laura"
+            }
+        ]
+        users.each {|x| User.create(x)}
+    end
 
     def wins
       if self.teams

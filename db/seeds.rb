@@ -16,6 +16,15 @@ users = [
   },
   {
     name: "Brad"
+  },
+  {
+    name: "Charlie"
+  },
+  {
+    name: "Saugat"
+  },
+  {
+    name: "Laura"
   }
 ]
 users.each {|x| User.create(x)}
