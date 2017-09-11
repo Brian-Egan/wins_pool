@@ -7,7 +7,8 @@ class TeamsController < ApplicationController
   def index
     # Team.update
     Team.should_auto_update?
-    @teams = Team.all
+    # @teams = Team.all
+    @teams = Team.order(wins: :desc, point_differential: :desc)
   end
 
   # GET /teams/1

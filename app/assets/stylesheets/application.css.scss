@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ .panel.panel-info {
+  overflow: hidden;
+ }
+
+ html, body {
+    height: 100%;
+}
+
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 /*!

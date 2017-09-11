@@ -43,7 +43,7 @@ class Pool < ApplicationRecord
           },
           {
             name: "Saugat",
-            teams: ["Patriots", "Buccaneers", "Bengals"]
+            teams: ["Patriots", "Buccaneers", "Bengals", "Colts"]
           },
           {
             name: "Laura",
@@ -60,27 +60,27 @@ class Pool < ApplicationRecord
         users: [
           {
             name: "Brian",
-            teams: ["49ers", "Redskins", "Ravens"]
+            teams: ["49ers", "Redskins", "Ravens", "Falcons"]
           },
           {
             name: "Rob",
-            teams: ["Bears", "Colts","Broncos"]
+            teams: ["Bears", "Colts","Broncos", "Buccaneers"]
           },
           {
             name: "Brad",
-            teams: ["Rams", "Chargers", "Saints"]
+            teams: ["Rams", "Chargers", "Saints", "Bengals"]
           },
           {
             name: "Charlie",
-            teams: ["Browns", "Dolphins", "Lions"]
+            teams: ["Browns", "Dolphins", "Lions", "Raiders"]
           },
           {
             name: "Saugat",
-            teams: ["Bills", "Jaguars"]
+            teams: ["Bills", "Jaguars", "Cardinals", "Texans"]
           },
           {
             name: "Laura",
-            teams: ["Jets", "Eagles", "Vikings"]
+            teams: ["Jets", "Eagles", "Vikings", "Titans"]
           }
         ]
       }

@@ -3,17 +3,11 @@
 .clearfix
   %br
   %p 
-.center-block.col-md-11.col-md-offset-1.col-sm-10.col-xs-11  
+.center-block
   .panel.panel-info
-    .panel-heading.col-md-12
-      %h2#standingsPanelTitle.panel-title{class: "col-md-4"}= "#{@pool.name} Standings"
-      / #= link_to "Update NFL Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col-xs-2 col-xs-offset-6 col-lg-2 col-lg-offset-6 btn btn-primary btn-sm standingsBtn"
-      = link_to "Update Standings", update_standings_pool_path(order: :update_nfl), remote: true, class: "col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-6 col-xs-2 col-xs-offset-6 col-lg-2 col-lg-offset-6 btn btn-warning btn-sm standingsBtn"
-    #poolStandings.panel-body
+    .panel-heading
+      %h2#standingsPanelTitle.panel-title= "#{@pool.name} Standings"
+    #poolStandings.panel-body.container.row
       = render 'standings', locals: {pool: @pool, users: @users}
-      / #= render 'teams/standings', locals: {teams: @teams}
-      
-
-/ #= link_to 'Edit', edit_pool_path(@pool)
-/ \|
-/ #= link_to 'Back', pools_path
+  %br
+  = link_to "Update Standings", update_standings_pool_path(order: :update_nfl), remote: true, class: "col-2 pull-right btn btn-warning btn-sm standingsBtn"

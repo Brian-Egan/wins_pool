@@ -1,0 +1,21 @@
+
+## Adding the Loss pool onto my working Wins Pool
+
+
+Create a `Pool` model with following properties:
+    name:text
+    long_name:text
+    active:boolean
+    sort_order:text
+
+    has_many :users
+    has_many :teams, through: :users
+
+Change the users <-> teams relationship to be has_and_belongs_to_many
+
+Navbar at top shows both `pools`
+
+The `sort_order` will call a matching function on Team that defines how they are sorted for winners.
+
+ 
+    

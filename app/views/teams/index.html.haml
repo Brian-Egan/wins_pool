@@ -1,18 +1,13 @@
+%p#notice= notice
+
 .clearfix
   %br
   %p 
-.center-block.col-md-11.col-md-offset-1.col-sm-10.col-xs-11  
-  .panel.panel-info
+.center-block
+  .panel.panel-success
     .panel-heading
-      %h2#standingsPanelTitle.panel-title{class: "col-md-12"}= "NFL Standings"
-      .clearfix.col-md-12
-        / %br
-        %p
-      .row
-        = link_to "Update Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-1 col-md-offset-1 btn btn-primary btn-sm standingsBtn"
-        / #= link_to "Randomize", update_standings_teams_path(order: :randomize), remote: true, class: "col-md-1 btn btn-warning btn-sm col-md-offset-1 standingsBtn"
-        / #= link_to "Shuffle", update_standings_teams_path(order: :shuffle), remote: true, class: "col-md-1 btn btn-default btn-sm col-md-offset-1 standingsBtn"
-        / #= link_to "Reset", update_standings_teams_path(order: :default), remote: true, class: "col-md-1 btn btn-danger btn-sm col-md-offset-1 standingsBtn"
-    #teamStandings.panel-body
+      %h2#standingsPanelTitle.panel-title= "NFL Standings"
+    #teamStandings.panel-body.container.row
       = render 'standings', locals: {teams: @teams}
-%br
+  %br
+  = link_to "Update Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-1 col-md-offset-1 btn btn-primary btn-sm standingsBtn"

@@ -1,19 +1,20 @@
-%table.table-striped.col-md-12.col-sm-12.col-xs-12.table-hover
+%table.table-hover.table-striped.col-sm-12
   %thead
-    %tr.text-center
-      %th.text-center.col-md-1.col-lg-1.col-sm-1.col-cs-1 #
-      %th.text-center.col-md-4.col-lg-4.col-xs-4.col-sm-4 Name
-      %th.text-center= @pool.sort_stat.capitalize
-      %th.text-center Point Differential
-      %th.text-left Teams
-  %tbody
+    %tr.text-center.row
+      %th.col-sm-1.col-xs-1 #
+      %th.col-sm-4.col-xs-3 Name
+      %th.col-sm-2.col-xs-2.text-center= @pool.sort_stat.first.capitalize
+      / %th.col-2.col-xs-2 P. Diff
+      %th.col-sm-3.col-xs-4.text-center Teams
+  %tbody.container
     - @users.each_with_index do |user, indx|
-      %tr.text-center
-        %td= indx + 1
-        %td= user.name
-        %td= user.sort_stat
-        %td= user.point_differential
-        %td.text-left
+      %tr.row
+        %td.col-sm-1.col-xs-1= indx + 1
+        %td.col-sm-4.col-xs-3= user.name
+        %td.col-sm-2.col-xs-2.text-center
+          %strong= user.sort_stat
+        / %td.col-2.col-xs-2#= user.point_differential
+        %td.col-sm-3.col-xs-5
           %ul
-            - user.teams.each do |t|
-              %li.small= "#{t.name} (#{t.send(@pool.sort_stat)})"
+            - user.teams.sort_by{|x| x.send(@pool.sort_stat)}.reverse.each do |t|
+              %li.small= "#{t.name.split(" ").last} (#{t.send(@pool.sort_stat)})"
