@@ -1,7 +1,7 @@
-%table.table-hover.table-striped.col-sm-12.table-bordered
+%table.table-hover.table-striped.col-sm-12.table-bordered.standings-table
   %thead
     %tr.text-center
-      %th.col-sm-5.col-xs-5.text-left Name
+      %th.col-sm-6.col-xs-6.text-left Name
       %th.col-sm-2.col-xs-2.text-center W
       %th.col-sm-2.col-xs-2.text-center L
       / %th.col-2.col-xs-2 P. Diff
@@ -10,7 +10,7 @@
     - @teams.each do |team|
       - unless team.users.nil?
         %tr
-          %td.text-left.col-sm-5.col-xs-5= team.name
+          %td.text-left.col-sm-6.col-xs-6= team.name
           %td.text-center.col-sm-2.col-xs-2= team.wins
           %td.text-center.col-sm-2.col-xs-2= team.losses
           / %td.text-center.col-sm-1.col-xs-1#= team.ties

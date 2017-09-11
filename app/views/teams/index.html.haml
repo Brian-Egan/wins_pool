@@ -6,8 +6,12 @@
 .center-block
   .panel.panel-success
     .panel-heading
-      %h2#standingsPanelTitle.panel-title= "NFL Standings"
+      .row
+        %h2#standingsPanelTitle.panel-title.col-md-6.col-xs-6= "NFL Standings"
+        / .btn-group.btn-group-xs.pull-right.col-sm-1.col-xs-5{role: "group"}
+        /   %button.btn.btn-default{type: "button"} Wins
+        /   %button.btn.btn-default{type: "button"} Losses
     #teamStandings.panel-body.container.row
       = render 'standings', locals: {teams: @teams}
   %br
-  = link_to "Update Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-md-1 col-md-offset-1 btn btn-primary btn-sm standingsBtn"
+  = link_to "Update Standings", update_standings_teams_path(order: :update_nfl), remote: true, class: "col-2 pull-right btn btn-primary btn-sm standingsBtn"
