@@ -1,0 +1,13 @@
+I"Q(function() {
+  $(document).on('turbolinks:load', function() {
+    console.log("The page loaded!");
+    $('.standingsBtn').on('click', function() {
+      return console.log("hey man@");
+    });
+    return $('#standingsPanelTitle').on('click', function() {
+      return console.log("you clicked the title");
+    });
+  });
+
+}).call(this);
+:ET

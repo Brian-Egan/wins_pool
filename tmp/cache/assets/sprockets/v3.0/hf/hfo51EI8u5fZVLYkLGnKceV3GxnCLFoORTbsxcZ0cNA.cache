@@ -1,0 +1,7 @@
+I"{(function() {
+  $('.standingsBtn').on('click', function() {
+    return console.log("hey man@");
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,11 @@
+I"ã(function() {
+  $('.standingsBtn').on('click', function() {
+    return console.log("hey man@");
+  });
+
+  $('#standingsPanelTitle').on('click', function() {
+    return console.log("you clicked the title");
+  });
+
+}).call(this);
+:ET

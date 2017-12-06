@@ -10,11 +10,11 @@
     - @users.each_with_index do |user, indx|
       %tr.row
         %td.col-sm-1.col-xs-1= indx + 1
-        %td.col-sm-4.col-xs-3= user.name
-        %td.col-sm-2.col-xs-2.text-center
+        %td.col-sm-4.col-xs-4= user.name
+        %td.col-sm-3.col-xs-3.text-center
           %strong= user.sort_stat
         / %td.col-2.col-xs-2#= user.point_differential
-        %td.col-sm-3.col-xs-5
+        %td.col-sm-4.col-xs-5
           %ul
             - user.teams.sort_by{|x| x.send(@pool.sort_stat)}.reverse.each do |t|
               %li.small= "#{t.name.split(" ").last} (#{t.send(@pool.sort_stat)})"
