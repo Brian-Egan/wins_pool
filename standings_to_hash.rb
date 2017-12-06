@@ -2,7 +2,7 @@ require "Nokogiri"
 require 'open-uri'
 
 def display_standings
-    doc = Nokogiri::HTML(open("http://www.nfl.com/standings"))
+    doc = Nokogiri::HTML(open("https://www.nfl.com/standings"))
     standings_table = doc.xpath("//table")
     standings = Array.new
     discard_rows_that_contain = ["AFC","NFC","Conference"]

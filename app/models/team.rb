@@ -42,7 +42,7 @@ class Team < ApplicationRecord
 
 
   def self.update
-    doc = Nokogiri::HTML(open("http://www.nfl.com/standings"))
+    doc = Nokogiri::HTML(open("https://www.nfl.com/standings"))
     standings_table = doc.xpath("//table")
     rows = doc.xpath("//table/tbody/tr")
     header_row = rows.select{|x| x.text.include?("AFC")}.first
