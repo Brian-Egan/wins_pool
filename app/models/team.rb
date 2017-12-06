@@ -41,23 +41,20 @@ class Team < ApplicationRecord
   end
 
 
-  def self.update
-    doc = Nokogiri::HTML(open("https://www.nfl.com/standings"))
-    standings_table = doc.xpath("//table")
-    rows = doc.xpath("//table/tbody/tr")
-    header_row = rows.select{|x| x.text.include?("AFC")}.first
-    headers = header_row.css("td").map{|x| x.inner_text.strip}
+def self.update
+    # url = "https://www.nfl.com/standings" # No longer using NFL.com's standings table.
+    url = "http://www.espn.com/nfl/standings/_/group/league"
+    doc = Nokogiri::HTML(open(url))
+    header_row = doc.css("table.standings > thead.standings-categories > th")
+    headers = header_row.map{|x| x.inner_text.strip}
     headers[0] = "Team" # Instead of being set to "AFC East Team"
-    rows = rows.reject{|x| (x.text.include?("AFC") or x.text.include?("NFC") or x.text.include?("Conference") or x.text.empty?)}
+    rows = doc.css("tr.standings-row")
     rows.each do |row|
         team_hsh = {}
         headers.each_with_index{|h, i| team_hsh[h] = row.css("td")[i].inner_text.strip}
-        # ap team_hsh
-        
+        team_hsh["Team"] = team_hsh["Team"][0...-3] # To correct for ESPN's standings table appending each team's 3 letter abbrieviated name     
         team = self.find_or_create_by(name: team_hsh["Team"])
         team.update_attributes(wins: team_hsh["W"].to_i, losses: team_hsh["L"].to_i, ties: team_hsh["T"].to_i, points_for: team_hsh["PF"].to_i, points_against: team_hsh["PA"].to_i, long_record: team_hsh)
-        # ap team_hsh.map{|x| [x["Team"], x["W"]]}
-
         team.save if team.changed?
     end
   end

@@ -24512,3 +24512,274 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 802ms (Views: 188.0ms | ActiveRecord: 18.2ms)
 
 
+Started GET "/" for ::1 at 2017-12-06 12:03:24 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PoolsController#index as HTML
+  Rendering pools/index.html.haml within layouts/application
+  [1m[36mPool Load (0.9ms)[0m  [1m[34mSELECT "pools".* FROM "pools"[0m
+  Rendered pools/index.html.haml within layouts/application (49.4ms)
+  [1m[36mPool Load (0.6ms)[0m  [1m[34mSELECT "pools".* FROM "pools"[0m
+  Rendered layouts/_navigation_links.html.haml (3.6ms)
+  Rendered layouts/_navigation.html.haml (11.0ms)
+  Rendered layouts/_messages.html.haml (2.7ms)
+Completed 200 OK in 4593ms (Views: 4573.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/pools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/framework_and_overrides.self-4a1d4516eeb7b7c23ef6eabe7eef05bac0757e9ce4730fed413de7b9b08eefdb.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/scaffolds.self-4575c74e9070657faa29bfe57b5975845df31ca1d6cd5996a01015ac77c0f85d.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/teams.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/application.self-9405ae7c7162c3570047560c2a243f659959d0381db577442bacef3a58a9c13e.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/pools.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/users.self-5b50a7b0ed1e8b889af4e23cc8361ac0ed132e6802b0da5f276666347d15f426.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/application.self-120f3cf1cb67bea53c4a2a57336b34ca04b04b55a55c38cf76ce20a147e5eff9.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/assets/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-12-06 12:03:30 -0500
+Started GET "/pools/6" for ::1 at 2017-12-06 12:03:39 -0500
+Processing by PoolsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPool Load (0.3ms)[0m  [1m[34mSELECT  "pools".* FROM "pools" WHERE "pools"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."updated_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Minnesota Vikings"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 10], ["losses", 2], ["points_for", 285], ["points_against", 204], ["long_record", "---\nTeam: Minnesota Vikings\nW: '10'\nL: '2'\nT: '0'\nPCT: \".833\"\nHOME: 5-1\nROAD: 5-1\nDIV: 3-1\nCONF: 8-1\nPF: '285'\nPA: '204'\nDIFF: \"+81\"\nSTRK: W8\n"], ["updated_at", "2017-12-06 17:03:41.171187"], ["id", 229]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.179247"], ["point_differential", 81], ["id", 229]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Pittsburgh Steelers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 10], ["losses", 2], ["points_for", 281], ["points_against", 213], ["long_record", "---\nTeam: Pittsburgh Steelers\nW: '10'\nL: '2'\nT: '0'\nPCT: \".833\"\nHOME: 4-1\nROAD: 6-1\nDIV: 4-0\nCONF: 7-1\nPF: '281'\nPA: '213'\nDIFF: \"+68\"\nSTRK: W7\n"], ["updated_at", "2017-12-06 17:03:41.185454"], ["id", 212]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.192105"], ["point_differential", 68], ["id", 212]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Philadelphia Eagles"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 10], ["losses", 2], ["points_for", 361], ["points_against", 215], ["long_record", "---\nTeam: Philadelphia Eagles\nW: '10'\nL: '2'\nT: '0'\nPCT: \".833\"\nHOME: 6-0\nROAD: 4-2\nDIV: 4-0\nCONF: 8-1\nPF: '361'\nPA: '215'\nDIFF: \"+146\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.203792"], ["id", 223]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.210082"], ["point_differential", 146], ["id", 223]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "New England Patriot"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "New England Patriot"], ["created_at", "2017-12-06 17:03:41.216597"], ["updated_at", "2017-12-06 17:03:41.216597"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 10], ["losses", 2], ["ties", 0], ["points_for", 348], ["points_against", 223], ["long_record", "---\nTeam: New England Patriot\nW: '10'\nL: '2'\nT: '0'\nPCT: \".833\"\nHOME: 4-2\nROAD: 6-0\nDIV: 3-0\nCONF: 7-1\nPF: '348'\nPA: '223'\nDIFF: \"+125\"\nSTRK: W8\n"], ["updated_at", "2017-12-06 17:03:41.220498"], ["id", 239]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.224758"], ["point_differential", 125], ["id", 239]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Los Angeles Rams"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 9], ["losses", 3], ["points_for", 361], ["points_against", 222], ["long_record", "---\nTeam: Los Angeles Rams\nW: '9'\nL: '3'\nT: '0'\nPCT: \".750\"\nHOME: 4-2\nROAD: 5-1\nDIV: 3-1\nCONF: 6-3\nPF: '361'\nPA: '222'\nDIFF: \"+139\"\nSTRK: W2\n"], ["updated_at", "2017-12-06 17:03:41.234746"], ["id", 235]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.240414"], ["point_differential", 139], ["id", 235]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "New Orleans Saint"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "New Orleans Saint"], ["created_at", "2017-12-06 17:03:41.250622"], ["updated_at", "2017-12-06 17:03:41.250622"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 9], ["losses", 3], ["ties", 0], ["points_for", 353], ["points_against", 243], ["long_record", "---\nTeam: New Orleans Saint\nW: '9'\nL: '3'\nT: '0'\nPCT: \".750\"\nHOME: 5-1\nROAD: 4-2\nDIV: 3-0\nCONF: 7-2\nPF: '353'\nPA: '243'\nDIFF: \"+110\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.254340"], ["id", 240]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.264857"], ["point_differential", 110], ["id", 240]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Tennessee Titans"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 8], ["losses", 4], ["points_for", 266], ["points_against", 282], ["long_record", "---\nTeam: Tennessee Titans\nW: '8'\nL: '4'\nT: '0'\nPCT: \".667\"\nHOME: 5-1\nROAD: 3-3\nDIV: 4-1\nCONF: 7-4\nPF: '266'\nPA: '282'\nDIFF: \"-16\"\nSTRK: W2\n"], ["updated_at", "2017-12-06 17:03:41.273209"], ["id", 216]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.282979"], ["point_differential", -16], ["id", 216]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Seattle Seahawks"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 8], ["losses", 4], ["points_for", 290], ["points_against", 222], ["long_record", "---\nTeam: Seattle Seahawks\nW: '8'\nL: '4'\nT: '0'\nPCT: \".667\"\nHOME: 4-2\nROAD: 4-2\nDIV: 4-0\nCONF: 6-3\nPF: '290'\nPA: '222'\nDIFF: \"+68\"\nSTRK: W2\n"], ["updated_at", "2017-12-06 17:03:41.290507"], ["id", 236]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.295927"], ["point_differential", 68], ["id", 236]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Jacksonville Jaguars"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 8], ["losses", 4], ["points_for", 299], ["points_against", 178], ["long_record", "---\nTeam: Jacksonville Jaguars\nW: '8'\nL: '4'\nT: '0'\nPCT: \".667\"\nHOME: 4-2\nROAD: 4-2\nDIV: 3-1\nCONF: 8-2\nPF: '299'\nPA: '178'\nDIFF: \"+121\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.304181"], ["id", 215]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.309760"], ["point_differential", 121], ["id", 215]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Carolina Panthers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 8], ["losses", 4], ["points_for", 269], ["points_against", 238], ["long_record", "---\nTeam: Carolina Panthers\nW: '8'\nL: '4'\nT: '0'\nPCT: \".667\"\nHOME: 3-2\nROAD: 5-2\nDIV: 2-2\nCONF: 4-4\nPF: '269'\nPA: '238'\nDIFF: \"+31\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.316509"], ["id", 231]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.321647"], ["point_differential", 31], ["id", 231]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Baltimore Ravens"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 7], ["losses", 5], ["points_for", 280], ["points_against", 207], ["long_record", "---\nTeam: Baltimore Ravens\nW: '7'\nL: '5'\nT: '0'\nPCT: \".583\"\nHOME: 4-2\nROAD: 3-3\nDIV: 2-1\nCONF: 5-3\nPF: '280'\nPA: '207'\nDIFF: \"+73\"\nSTRK: W3\n"], ["updated_at", "2017-12-06 17:03:41.340695"], ["id", 211]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.351929"], ["point_differential", 73], ["id", 211]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Atlanta Falcons"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 7], ["losses", 5], ["points_for", 274], ["points_against", 244], ["long_record", "---\nTeam: Atlanta Falcons\nW: '7'\nL: '5'\nT: '0'\nPCT: \".583\"\nHOME: 3-3\nROAD: 4-2\nDIV: 1-1\nCONF: 6-2\nPF: '274'\nPA: '244'\nDIFF: \"+30\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.360113"], ["id", 232]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.396790"], ["point_differential", 30], ["id", 232]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Kansas City Chief"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Kansas City Chief"], ["created_at", "2017-12-06 17:03:41.409615"], ["updated_at", "2017-12-06 17:03:41.409615"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["ties", 0], ["points_for", 303], ["points_against", 274], ["long_record", "---\nTeam: Kansas City Chief\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 3-2\nROAD: 3-4\nDIV: 2-1\nCONF: 4-4\nPF: '303'\nPA: '274'\nDIFF: \"+29\"\nSTRK: L4\n"], ["updated_at", "2017-12-06 17:03:41.413497"], ["id", 241]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.417758"], ["point_differential", 29], ["id", 241]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Los Angeles Chargers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["points_for", 268], ["points_against", 212], ["long_record", "---\nTeam: Los Angeles Chargers\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 3-3\nROAD: 3-3\nDIV: 2-2\nCONF: 4-5\nPF: '268'\nPA: '212'\nDIFF: \"+56\"\nSTRK: W3\n"], ["updated_at", "2017-12-06 17:03:41.424545"], ["id", 222]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.431789"], ["point_differential", 56], ["id", 222]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Buffalo Bills"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["points_for", 227], ["points_against", 283], ["long_record", "---\nTeam: Buffalo Bills\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 4-2\nROAD: 2-4\nDIV: 1-2\nCONF: 4-4\nPF: '227'\nPA: '283'\nDIFF: \"-56\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.438113"], ["id", 207]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.444846"], ["point_differential", -56], ["id", 207]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Detroit Lions"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["points_for", 314], ["points_against", 308], ["long_record", "---\nTeam: Detroit Lions\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 2-4\nROAD: 4-2\nDIV: 3-1\nCONF: 5-4\nPF: '314'\nPA: '308'\nDIFF: \"+6\"\nSTRK: L2\n"], ["updated_at", "2017-12-06 17:03:41.451202"], ["id", 227]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.462877"], ["point_differential", 6], ["id", 227]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Green Bay Packer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Green Bay Packer"], ["created_at", "2017-12-06 17:03:41.471610"], ["updated_at", "2017-12-06 17:03:41.471610"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["ties", 0], ["points_for", 258], ["points_against", 281], ["long_record", "---\nTeam: Green Bay Packer\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 4-3\nROAD: 2-3\nDIV: 2-2\nCONF: 5-4\nPF: '258'\nPA: '281'\nDIFF: \"-23\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.488785"], ["id", 242]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.513327"], ["point_differential", -23], ["id", 242]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Oakland Raiders"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["points_for", 249], ["points_against", 278], ["long_record", "---\nTeam: Oakland Raiders\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 4-3\nROAD: 2-3\nDIV: 2-2\nCONF: 5-5\nPF: '249'\nPA: '278'\nDIFF: \"-29\"\nSTRK: W2\n"], ["updated_at", "2017-12-06 17:03:41.522039"], ["id", 219]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.530419"], ["point_differential", -29], ["id", 219]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Dallas Cowboys"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 6], ["losses", 6], ["points_for", 286], ["points_against", 284], ["long_record", "---\nTeam: Dallas Cowboys\nW: '6'\nL: '6'\nT: '0'\nPCT: \".500\"\nHOME: 3-4\nROAD: 3-2\nDIV: 3-1\nCONF: 5-4\nPF: '286'\nPA: '284'\nDIFF: \"+2\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.538891"], ["id", 224]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.549572"], ["point_differential", 2], ["id", 224]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "New York Jets"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 5], ["losses", 7], ["points_for", 266], ["points_against", 288], ["long_record", "---\nTeam: New York Jets\nW: '5'\nL: '7'\nT: '0'\nPCT: \".417\"\nHOME: 4-3\nROAD: 1-4\nDIV: 2-3\nCONF: 5-4\nPF: '266'\nPA: '288'\nDIFF: \"-22\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.556459"], ["id", 210]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.564071"], ["point_differential", -22], ["id", 210]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Washington Redskins"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 5], ["losses", 7], ["points_for", 272], ["points_against", 314], ["long_record", "---\nTeam: Washington Redskins\nW: '5'\nL: '7'\nT: '0'\nPCT: \".417\"\nHOME: 3-3\nROAD: 2-4\nDIV: 1-4\nCONF: 4-6\nPF: '272'\nPA: '314'\nDIFF: \"-42\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.576622"], ["id", 226]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.609683"], ["point_differential", -42], ["id", 226]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Miami Dolphins"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 5], ["losses", 7], ["points_for", 209], ["points_against", 298], ["long_record", "---\nTeam: Miami Dolphins\nW: '5'\nL: '7'\nT: '0'\nPCT: \".417\"\nHOME: 3-3\nROAD: 2-4\nDIV: 1-2\nCONF: 4-4\nPF: '209'\nPA: '298'\nDIFF: \"-89\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.621677"], ["id", 208]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.628140"], ["point_differential", -89], ["id", 208]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Arizona Cardinals"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 5], ["losses", 7], ["points_for", 219], ["points_against", 310], ["long_record", "---\nTeam: Arizona Cardinals\nW: '5'\nL: '7'\nT: '0'\nPCT: \".417\"\nHOME: 3-3\nROAD: 2-4\nDIV: 2-3\nCONF: 3-6\nPF: '219'\nPA: '310'\nDIFF: \"-91\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.641778"], ["id", 237]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.651616"], ["point_differential", -91], ["id", 237]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Cincinnati Bengals"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 5], ["losses", 7], ["points_for", 219], ["points_against", 238], ["long_record", "---\nTeam: Cincinnati Bengals\nW: '5'\nL: '7'\nT: '0'\nPCT: \".417\"\nHOME: 3-3\nROAD: 2-4\nDIV: 2-3\nCONF: 5-6\nPF: '219'\nPA: '238'\nDIFF: \"-19\"\nSTRK: L1\n"], ["updated_at", "2017-12-06 17:03:41.659242"], ["id", 214]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.667959"], ["point_differential", -19], ["id", 214]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Tampa Bay Buccaneer"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tampa Bay Buccaneer"], ["created_at", "2017-12-06 17:03:41.682355"], ["updated_at", "2017-12-06 17:03:41.682355"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 4], ["losses", 8], ["ties", 0], ["points_for", 243], ["points_against", 288], ["long_record", "---\nTeam: Tampa Bay Buccaneer\nW: '4'\nL: '8'\nT: '0'\nPCT: \".333\"\nHOME: 3-2\nROAD: 1-6\nDIV: 0-3\nCONF: 2-6\nPF: '243'\nPA: '288'\nDIFF: \"-45\"\nSTRK: L2\n"], ["updated_at", "2017-12-06 17:03:41.687708"], ["id", 243]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.695993"], ["point_differential", -45], ["id", 243]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Houston Texans"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 4], ["losses", 8], ["points_for", 296], ["points_against", 309], ["long_record", "---\nTeam: Houston Texans\nW: '4'\nL: '8'\nT: '0'\nPCT: \".333\"\nHOME: 3-3\nROAD: 1-5\nDIV: 1-3\nCONF: 3-6\nPF: '296'\nPA: '309'\nDIFF: \"-13\"\nSTRK: L2\n"], ["updated_at", "2017-12-06 17:03:41.719039"], ["id", 217]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.728504"], ["point_differential", -13], ["id", 217]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Chicago Bears"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 3], ["losses", 9], ["points_for", 191], ["points_against", 267], ["long_record", "---\nTeam: Chicago Bears\nW: '3'\nL: '9'\nT: '0'\nPCT: \".250\"\nHOME: 2-5\nROAD: 1-4\nDIV: 0-4\nCONF: 1-9\nPF: '191'\nPA: '267'\nDIFF: \"-76\"\nSTRK: L5\n"], ["updated_at", "2017-12-06 17:03:41.752442"], ["id", 230]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.759456"], ["point_differential", -76], ["id", 230]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Indianapolis Colts"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 3], ["losses", 9], ["points_for", 205], ["points_against", 330], ["long_record", "---\nTeam: Indianapolis Colts\nW: '3'\nL: '9'\nT: '0'\nPCT: \".250\"\nHOME: 2-4\nROAD: 1-5\nDIV: 1-4\nCONF: 2-6\nPF: '205'\nPA: '330'\nDIFF: \"-125\"\nSTRK: L3\n"], ["updated_at", "2017-12-06 17:03:41.783569"], ["id", 218]]
+  [1m[35mSQL (6.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.799529"], ["point_differential", -125], ["id", 218]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Denver Broncos"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 3], ["losses", 9], ["points_for", 206], ["points_against", 315], ["long_record", "---\nTeam: Denver Broncos\nW: '3'\nL: '9'\nT: '0'\nPCT: \".250\"\nHOME: 3-3\nROAD: 0-6\nDIV: 2-3\nCONF: 2-7\nPF: '206'\nPA: '315'\nDIFF: \"-109\"\nSTRK: L8\n"], ["updated_at", "2017-12-06 17:03:41.840404"], ["id", 221]]
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.862931"], ["point_differential", -109], ["id", 221]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "San Francisco 49er"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "San Francisco 49er"], ["created_at", "2017-12-06 17:03:41.877191"], ["updated_at", "2017-12-06 17:03:41.877191"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "ties" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 2], ["losses", 10], ["ties", 0], ["points_for", 202], ["points_against", 298], ["long_record", "---\nTeam: San Francisco 49er\nW: '2'\nL: '10'\nT: '0'\nPCT: \".167\"\nHOME: 1-5\nROAD: 1-5\nDIV: 0-5\nCONF: 2-9\nPF: '202'\nPA: '298'\nDIFF: \"-96\"\nSTRK: W1\n"], ["updated_at", "2017-12-06 17:03:41.880840"], ["id", 244]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.889040"], ["point_differential", -96], ["id", 244]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "New York Giants"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[33mUPDATE "teams" SET "wins" = ?, "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["wins", 2], ["losses", 10], ["points_for", 189], ["points_against", 291], ["long_record", "---\nTeam: New York Giants\nW: '2'\nL: '10'\nT: '0'\nPCT: \".167\"\nHOME: 1-4\nROAD: 1-6\nDIV: 0-3\nCONF: 0-8\nPF: '189'\nPA: '291'\nDIFF: \"-102\"\nSTRK: L2\n"], ["updated_at", "2017-12-06 17:03:41.914717"], ["id", 225]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.934816"], ["point_differential", -102], ["id", 225]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT ?[0m  [["name", "Cleveland Browns"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "teams" SET "losses" = ?, "points_for" = ?, "points_against" = ?, "long_record" = ?, "updated_at" = ? WHERE "teams"."id" = ?[0m  [["losses", 12], ["points_for", 176], ["points_against", 308], ["long_record", "---\nTeam: Cleveland Browns\nW: '0'\nL: '12'\nT: '0'\nPCT: \".000\"\nHOME: 0-6\nROAD: 0-6\nDIV: 0-4\nCONF: 0-10\nPF: '176'\nPA: '308'\nDIFF: \"-132\"\nSTRK: L12\n"], ["updated_at", "2017-12-06 17:03:41.945521"], ["id", 213]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = ?, "point_differential" = ? WHERE "teams"."id" = ?[0m  [["updated_at", "2017-12-06 17:03:41.951393"], ["point_differential", -132], ["id", 213]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."pool_id" = ?[0m  [["pool_id", 6]]
+  [1m[36mHABTM_Teams Load (0.8ms)[0m  [1m[34mSELECT "teams_users".* FROM "teams_users" WHERE "teams_users"."user_id" IN (28, 29, 30, 31, 32, 33)[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (236, 231, 229, 221, 212, 220, 211, 222, 228, 225, 237, 208, 232, 216, 223, 217, 209, 233, 214, 218, 224, 219, 227, 234)[0m
+  Rendering pools/show.html.haml within layouts/application
+  Rendered pools/_standings.html.haml (87.0ms)
+  Rendered pools/show.html.haml within layouts/application (100.8ms)
+  [1m[36mPool Load (0.4ms)[0m  [1m[34mSELECT "pools".* FROM "pools"[0m
+  Rendered layouts/_navigation_links.html.haml (9.9ms)
+  Rendered layouts/_navigation.html.haml (63.8ms)
+  Rendered layouts/_messages.html.haml (25.2ms)
+Completed 200 OK in 3193ms (Views: 442.1ms | ActiveRecord: 140.8ms)
+
+
+Started GET "/pools/7" for ::1 at 2017-12-06 12:03:47 -0500
+Processing by PoolsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPool Load (0.1ms)[0m  [1m[34mSELECT  "pools".* FROM "pools" WHERE "pools"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."updated_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."pool_id" = ?[0m  [["pool_id", 7]]
+  [1m[36mHABTM_Teams Load (0.2ms)[0m  [1m[34mSELECT "teams_users".* FROM "teams_users" WHERE "teams_users"."user_id" IN (34, 35, 36, 37, 38, 39)[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (238, 226, 211, 232, 230, 218, 221, 233, 235, 222, 234, 214, 213, 208, 227, 219, 207, 215, 237, 217, 210, 223, 229, 216)[0m
+  Rendering pools/show.html.haml within layouts/application
+  Rendered pools/_standings.html.haml (22.2ms)
+  Rendered pools/show.html.haml within layouts/application (38.2ms)
+  [1m[36mPool Load (0.2ms)[0m  [1m[34mSELECT "pools".* FROM "pools"[0m
+  Rendered layouts/_navigation_links.html.haml (3.6ms)
+  Rendered layouts/_navigation.html.haml (12.6ms)
+  Rendered layouts/_messages.html.haml (3.7ms)
+Completed 200 OK in 306ms (Views: 288.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pools/6" for ::1 at 2017-12-06 12:03:51 -0500
+Processing by PoolsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPool Load (1.5ms)[0m  [1m[34mSELECT  "pools".* FROM "pools" WHERE "pools"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."updated_at" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."pool_id" = ?[0m  [["pool_id", 6]]
+  [1m[36mHABTM_Teams Load (0.3ms)[0m  [1m[34mSELECT "teams_users".* FROM "teams_users" WHERE "teams_users"."user_id" IN (28, 29, 30, 31, 32, 33)[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (236, 231, 229, 221, 212, 220, 211, 222, 228, 225, 237, 208, 232, 216, 223, 217, 209, 233, 214, 218, 224, 219, 227, 234)[0m
+  Rendering pools/show.html.haml within layouts/application
+  Rendered pools/_standings.html.haml (19.1ms)
+  Rendered pools/show.html.haml within layouts/application (50.1ms)
+  [1m[36mPool Load (0.3ms)[0m  [1m[34mSELECT "pools".* FROM "pools"[0m
+  Rendered layouts/_navigation_links.html.haml (12.4ms)
+  Rendered layouts/_navigation.html.haml (23.3ms)
+  Rendered layouts/_messages.html.haml (3.2ms)
+Completed 200 OK in 396ms (Views: 340.5ms | ActiveRecord: 3.1ms)
+
+
