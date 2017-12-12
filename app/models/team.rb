@@ -50,7 +50,6 @@ def self.update
   teams.each do |teamjson|
     team = self.find_or_create_by(name: "#{teamjson['team']['City']} #{teamjson['team']['Name']}")
     if team 
-      puts "Adding #{team.name} from MySportsFeeds API"
       stats = teamjson['stats']
       wins = stats['Wins']['#text'].to_i
       losses = stats['Losses']['#text'].to_i
