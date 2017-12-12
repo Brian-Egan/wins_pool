@@ -68,13 +68,14 @@ class User < ApplicationRecord
           }
         ]
       users.each {|x|
-        u = User.create(name: x[:name])
+        u = User.User.find_or_create_by(name: x[:name])
 
       }
   end
 
     def self.create_users_and_associate_teams
-      Team.all.each{|t| t.update_attributes(user_id: nil)}
+      # Team.all.each{|t| t.update_attributes(user_id: nil)}
+      Team.all.each{|t| t.update_attributes(users: [])}
       self.destroy_all
       users = [
           {
@@ -104,7 +105,7 @@ class User < ApplicationRecord
       ]
       users.each {|x| 
         # puts "Creating #{x} - who has teams #{x[:teams]}"
-        u = User.create(name: x[:name])
+        u = User.find_or_create_by(name: x[:name])
         # puts "Created #{x}"
         x[:teams].each do |t|
           # puts "Assigning #{t} to #{u.name}"
@@ -122,8 +123,10 @@ class User < ApplicationRecord
 
     def add_team_by_name(team_name)
       team = Team.where("name like ?","%#{team_name}").first
-      self.teams << team 
-      self.save
+      # self.teams << team 
+      team.users << self
+      team.save
+      # self.save
       # team.update_attributes(user_id: u.id) unless team.nil?
     end
 

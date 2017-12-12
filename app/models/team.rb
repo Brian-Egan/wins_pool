@@ -28,6 +28,7 @@ class Team < ApplicationRecord
 
   # require "Nokogiri"
   require 'open-uri'
+  require "json"
 
   def self.update_interval
     min = 20
@@ -42,6 +43,28 @@ class Team < ApplicationRecord
 
 
 def self.update
+  url = "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/overall_team_standings.json?teamstats=W,L,T,PF,PA"
+  page = Nokogiri::HTML(open(url, http_basic_authentication: ["BrianEgan","BananaUmbrella"]))
+  resp = JSON.parse(page)
+  teams = resp["overallteamstandings"]["teamstandingsentry"]
+  teams.each do |teamjson|
+    team = self.find_or_create_by(name: "#{teamjson['team']['City']} #{teamjson['team']['Name']}")
+    if team 
+      puts "Adding #{team.name} from MySportsFeeds API"
+      stats = teamjson['stats']
+      wins = stats['Wins']['#text'].to_i
+      losses = stats['Losses']['#text'].to_i
+      ties = stats['Ties']['#text'].to_i
+      points_for = stats['PointsFor']['#text'].to_i
+      points_against = stats['PointsAgainst']['#text'].to_i
+      team.update_attributes(wins: wins, losses: losses, ties: ties, points_for: points_for, points_against: points_against, long_record: teamjson)
+    end
+  end
+end
+
+
+
+def self.old_update
     # url = "https://www.nfl.com/standings" # No longer using NFL.com's standings table.
     url = "http://www.espn.com/nfl/standings/_/group/league"
     doc = Nokogiri::HTML(open(url))
